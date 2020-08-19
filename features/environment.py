@@ -6,9 +6,7 @@ from pages.base import BasePage
 
 
 def before_scenario(context, scenario):
-    driver = webdriver.Firefox(
-        executable_path=f"{os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), '.')}\\drivers"
-                        f"\\geckodriver.exe")
+    driver = webdriver.Firefox(executable_path='../drivers/geckodriver.exe')
     page = BasePage(driver)
     context.page = page
 
